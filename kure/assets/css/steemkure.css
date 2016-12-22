@@ -1,0 +1,222 @@
+/**
+*   @author:        krnel
+*   @version:       0.1
+*   @references: steemit.com gitbub css
+*
+*/
+
+
+#kureIntro {
+	font-size: 1.1em;
+}
+#manageSelect .four.wide.column .segment {
+	min-height:150px;
+	/*min-width:200px;*/
+}
+#manageSelect ul {
+  list-style:none;
+  padding:0;
+  padding-right:0px;
+}
+#manageSelect h4 {
+  /*border-bottom: solid 1px #ddd;*/
+}
+.listTitle {
+  border-bottom: solid 1px #ddd;
+}
+.footList {
+  border-top: solid 1px #ddd;
+}
+.footList p {
+  padding-top:5px;
+}
+#manageSelect .follow, #manageSelect .post {
+  font-size:0.9em;
+}
+
+#addPostModal, #loginModal {
+  max-width:600px;
+}
+#remPostModal, #remListModal {
+  max-width:400px;
+}
+.clear {
+  clear:both;
+}
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
+.footList .left {
+    font-size:0.9em;
+}
+
+
+
+.summaryPostImage {
+  float: left;
+  width: 130px;
+  height: 4.5rem;
+  background-color: #EEE;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  border: 1px solid #EEE;
+}
+
+#newPosts li {
+	list-style: none;
+	clear: both;
+  padding: 0;
+  margin-left: -40px;
+	margin-bottom: 20px;
+  /*margin-left: -2rem;*/
+}
+.summaryPostContent {
+	margin-left: 10px;
+}
+
+.icon {
+  vertical-align: middle;
+
+  > svg, span.icon {
+    width: 1.12rem;
+    height: 1.12rem;
+    vertical-align: top;
+  }
+
+  &.fill-black > svg > path {
+    fill:black;
+  }
+}
+
+
+
+.voting {
+  white-space: nowrap !important;
+  span {
+    white-space: nowrap !important;
+  }
+}
+
+.voting__button {
+  path {
+    fill: $dark-gray;
+  }
+  circle {
+    stroke: $dark-gray;
+  }
+  > a:hover path {
+    fill: $black;
+  }
+}
+
+.voting__about-flag {
+    margin-right: 30px;
+}
+
+.voting__button-up {
+  .icon {
+    margin-left: 0;
+  }
+  > a {
+    padding-right: 0.5rem;
+  }
+}
+
+.voting__button-up > a:hover, a.confirm_weight:hover {
+  path {
+    fill: #333;
+  }
+  circle {
+    fill: #fff;
+    stroke: #333;
+  }
+}
+
+.voting__button-up.votingUp {
+  padding-right: 0.5rem;
+  svg {
+    border: 1px solid #4BA2F2;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    animation: loading 500ms infinite linear;
+  }
+}
+
+.voting__button-down.votingDown svg {
+  border: 1px solid #a00;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  animation: loading 500ms infinite linear;
+}
+
+.voting__button-down {
+  .voting__button-downvotes {
+    color: #aaa;
+    font-size: 80%;
+    vertical-align: 15%;
+    padding-right: 0.1rem;
+  }
+
+  a:hover path {
+    fill: #a00;
+  }
+}
+
+.voting__button--upvoted path {
+  fill: #fff !important;
+}
+
+.voting__button--upvoted circle {
+  fill: #4BA2F2;
+  stroke: #4BA2F2;
+}
+
+.voting__button--upvoted a:hover path {
+  fill: #fff !important;
+}
+
+.voting__button--upvoted a:hover circle {
+  fill: #258DEB;
+  stroke: #258DEB;
+}
+
+.voting__button--downvoted path {
+  fill: #a00;
+}
+
+.voting__inner {
+  border-right: 1px solid #cacaca;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+
+
+
+@media screen and (max-width: 39.9375em) {
+  .voting__button-up {
+    .dropdown-pane {
+      margin-top: -36px;
+      margin-left: -10px;
+    }
+  }
+}
+
+/* Medium and bigger */
+@media screen and (min-width: 39.9375em) {
+  .voting__button-up {
+    display: inline-block;
+    position: relative;
+    .dropdown-pane {
+      top: -18px;
+      left: -28px;
+    }
+  }
+}
