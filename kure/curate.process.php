@@ -68,8 +68,7 @@ try {
 						"name" => $user
 					]);
 				//$datas = $database->count("curation_lists", ["owner_id" => $user_id]);
-
-			    	if ($database->count("curation_lists", ["owner_id" => $user_id]) <= $listLimit) {
+			    	if ($database->count("curation_lists", ["owner_id" => $user_id]) < $listLimit) {
 
 				    	//insert name and owner id
 						$database->insert("curation_lists", [
