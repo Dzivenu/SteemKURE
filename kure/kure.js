@@ -451,9 +451,12 @@ var kure = function(){
 	function processCreateList() {
 		$("#kurErrors").html(""); //clear error msgs from b4, if any
 		var lName = "";
-		lName = $("#listName").val();
-		if (lName == '' || !lName.match(/^[a-zA-Z]{3,20}[a-zA-Z0-9\s]*$/)) {
+		lName = $.trim($("#listName").val());
+		if (lName == '' || !lName.match(/.{3,20}/)) {
 			$('#kurErrors').html('<div class="ui red basic label">You must enter a List Name of at least 3 letters long.</div>');
+			return false;
+		}else if (lName == '' || !lName.match(/^[a-zA-Z]{3,20}[a-zA-Z\s]*$/)) {
+			$('#kurErrors').html('<div class="ui red basic label">You must use letters or spaces only.</div>');
 			return false;
 		}
 		//username = sessionStorage.getItem("username");
