@@ -469,7 +469,7 @@ var kure = function(){
 
 			if (typeof res === "object") {
 		    	$( "#listCreate .ui.message.content" ).append( "<p>Successufully created the new list: <strong>" + res[0].name + "</strong></p>");
-		    	$('#manageSelect').html('');
+		    	//$('#manageSelect').html('');
 		    	genManageList(res);
 		    }else {
 		    	$("#kurErrors").html($("#kurErrors").html()+'<div class="ui red basic label">'+res+'</div>');
