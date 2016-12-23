@@ -242,16 +242,15 @@ var kure = function(){
 	}
 	showRemPost = function(id, url, lname){
 		if (isAuth) {
+			$('#remPostModal .description').html('<p>Post: '+url+'</p><p>From List: '+lname+'</p><div  id="remPostConfirm" class="mini ui button">Remove</div >');
 			$('#remPostConfirm').off('click').on("click", function(e){
 				e.preventDefault();
-				console.log("rem-ID: "+id+"  URL: "+url);
 				//on login click, show modal to login, if not already loggedin
 				processRemPost(id, url, function(res){
 					$("div[data-id='"+id+"'] a[href='"+url+"']").parents("li").remove();
 					$('#list'+id+' .post').html(+($('#list'+id+' .post').html()) - 1);
 				})
 			});
-			$('#remPostModal .description').html('<p>Post: '+url+'</p><p>From List: '+lname+'</p><div  id="remListConfirm" class="mini ui button">Remove</div >');
 			$('#remPostModal').modal('show');
 		}else { deniedAccess(); }
 	}
@@ -334,7 +333,7 @@ var kure = function(){
 	}
 
 	function deniedAccess() {
-		$('#kurErrors').html('<div class="ui red basic label">Please login with your Steemit.com account before curating and voting.</div>');
+		$('#kurErrors').html('<div class="ui red basic label">Please login with your Steemit.com account.</div>');
 	}
 
 	function init() {
