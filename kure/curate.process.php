@@ -7,7 +7,7 @@ require_once  'config.php';
 
 $mode = "";
 $datas = "";
-$listLimit = 20;
+$listLimit = 3;
 
 if ($_POST) {
 	if (isset($_POST["mode"])) {
@@ -53,7 +53,7 @@ try {
 		
 	}elseif ($mode == "createList") {
 		if (isset($_POST["lname"])) {
-			$listName = $_POST['lname'];
+			$listName = strtolower($_POST['lname']);
 			
 		    if ($database->has("curation_lists", ["name" => $listName])) {
 		    	$datas = "This list name already exists: " . $listName;
@@ -68,8 +68,7 @@ try {
 						"name" => $user
 					]);
 				//$datas = $database->count("curation_lists", ["owner_id" => $user_id]);
-
-			    	if ($database->count("curation_lists", ["owner_id" => $user_id]) <= $listLimit) {
+			    	if ($database->count("curation_lists", ["owner_id" => $user_id]) < $listLimit) {
 
 				    	//insert name and owner id
 						$database->insert("curation_lists", [
@@ -82,7 +81,7 @@ try {
 							"name" => $listName
 						]);
 
-						$datas = array( 0 => ["id" => $list_id, "name" => $listName, "followers" => 1, "totalposts" => 0, "m" => "c"]);
+						$datas = array( 0 => ["id" => $list_id, "name" => $_POST['lname'], "followers" => 1, "totalposts" => 0, "m" => "c"]);
 					}else {
 						$datas = "You already have the maximum of " . $listLimit . " lists. <br/><br/>This is to prevent abuse of having too many duplicate categorical lists. Thank you.";
 					}
