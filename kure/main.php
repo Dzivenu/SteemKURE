@@ -79,7 +79,7 @@ if (!defined('PROPER_ACCESS')) {
 									<div class="ui message content">
 										<div class="ui form">
 											<div class="inline field">
-												<label>List Name: </label><input type="text" id="listName" readonly placeholder="Choose a name" class=""> &nbsp;
+												<label>List Name: </label><input type="text" id="listName" readonly placeholder="ex: 'Krnels Favs'" class=""> &nbsp;
 												<div  id="createList" class="mini ui button">Create</div >
 											</div>
 										</div>
