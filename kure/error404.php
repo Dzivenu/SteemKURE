@@ -1,8 +1,4 @@
-<?php header('Content-type: text/html; charset=utf-8'); 
-if (!defined('PROPER_ACCESS')) {
-	exit;
-}
-?>
+<?php header('Content-type: text/html; charset=utf-8'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,32 +27,39 @@ if (!defined('PROPER_ACCESS')) {
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/steemkure.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>-->
 	<script type="text/javascript" src="semantic/components/tab.min.js"></script>
 	<script type="text/javascript" src="semantic/components/transition.min.js"></script>
-	<script type="text/javascript" src="semantic/components/modal.min.js"></script>
-	<script type="text/javascript" src="semantic/components/form.min.js"></script>
-	<script type="text/javascript" src="semantic/components/dimmer.min.js"></script>
-	<script type="text/javascript" src="semantic/components/dropdown.min.js"></script>
-	<!--<script type="text/javascript" src="semantic/components/accordion.min.js"></script>
-	<script type="text/javascript" src="semantic/components/search.min.js"></script>
-	<script type="text/javascript" src="semantic/components/popup.min.js"></script>-->
-	<!--<script type="text/javascript" src="assets/js/steemjs-lib.js"></script>-->
-	<script type="text/javascript" src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>-
 	<script type="text/javascript" src="https://cdn.steemjs.com/lib/latest/steemconnect.min.js"></script>
-	<script type="text/javascript" src="kure.js"></script>
 	<style type="text/css">
 		.ui.button, .ui.message, .ui.segment, .ui.menu, .ui.label, .ui.modal, .ui.modal .form .button {
 			border-radius: 0rem;
 		}
 	</style>
-	<script>
-    $(document).ready(function () {
-      (function(){kure.init();})();
-	});
-  </script>
 </head>
+<body>
+	<div class="ui container">
+		<div class="ui grid">
+			<div class="row"></div> <!-- TOP SPACER -->
+			<div class="row">
+				<!-- MAIN -->
+				<div class="sixteen wide column">
+					<div id="nav" class="ui blue menu">
+						<a id="home" class="item" href="./">Home</a>
+						<a id="kurate" class="item" href="kurate">Kurate</a>
+						<a id="manage" class="item" href="manage">Manage</a>
+						<a id="about" class="item" href="about">About</a>						
+						<div class="right menu">
+							<a id="loginLink" class="ui item">Login</a>
+						</div>
+					</div>
+					<div class="ui active" id="homePage">
+						Error, this page doesn't exist.
+					</div>
+				</div><!-- end MAIN -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
