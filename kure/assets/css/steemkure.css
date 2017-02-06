@@ -5,7 +5,6 @@
 *
 */
 
-
 #kureIntro {
 	font-size: 1.1em;
 }
@@ -13,13 +12,10 @@
 	min-height:150px;
 	/*min-width:200px;*/
 }
-#manageSelect ul {
+#manageSelect ul, #viewListModal ul.titles, #topLists ul, #recentPosts ul, #managePosts ul, #manageMembers ul, #listsPage ul  {
   list-style:none;
   padding:0;
   padding-right:0px;
-}
-#manageSelect h4 {
-  /*border-bottom: solid 1px #ddd;*/
 }
 .listTitle {
   border-bottom: solid 1px #ddd;
@@ -30,15 +26,14 @@
 .footList p {
   padding-top:5px;
 }
-#manageSelect .follow, #manageSelect .post {
+.follow, .post {
   font-size:0.9em;
+  font-weight: bold;
 }
 
-#addPostModal, #loginModal {
-  max-width:600px;
-}
-#remPostModal, #remListModal {
-  max-width:400px;
+#addPostModal, #remListModal, #remPostModal, #addMemModal {
+  width: 550px;
+    margin: 0 0 0 -275px;
 }
 .clear {
   clear:both;
@@ -52,6 +47,38 @@
 .footList .left {
     font-size:0.9em;
 }
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+.center {
+  text-align: center;
+  }
+
+
+/*#managePage .content > .manageSections ~ .manageSections {
+    margin-top:10px;
+}*/
+
+
+
+
+
+
+/*#remListModal {
+    width: 550px;
+    margin: 0 0 0 -275px;
+  }*/
+/*@media screen and (min-width: 1px) {
+  #remListModal {
+   width: 550px;
+    margin: 0 0 0 -275px;
+  }
+}*/
+
+
 
 
 
@@ -77,7 +104,7 @@
 .summaryPostContent {
 	margin-left: 10px;
 }
-
+/*
 .icon {
   vertical-align: middle;
 
@@ -101,17 +128,7 @@
   }
 }
 
-.voting__button {
-  path {
-    fill: $dark-gray;
-  }
-  circle {
-    stroke: $dark-gray;
-  }
-  > a:hover path {
-    fill: $black;
-  }
-}
+
 
 .voting__about-flag {
     margin-right: 30px;
@@ -199,7 +216,6 @@
 
 
 
-
 @media screen and (max-width: 39.9375em) {
   .voting__button-up {
     .dropdown-pane {
@@ -209,14 +225,4 @@
   }
 }
 
-/* Medium and bigger */
-@media screen and (min-width: 39.9375em) {
-  .voting__button-up {
-    display: inline-block;
-    position: relative;
-    .dropdown-pane {
-      top: -18px;
-      left: -28px;
-    }
-  }
-}
+*/
